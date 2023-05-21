@@ -1,0 +1,25 @@
+{
+  "name": "nomids-media",
+  "version": "1.0.0",
+  "description": "A social media website for food lovers and cooks.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "engines": {
+    "node": "14.21.3"
+  },
+  "scripts": {
+    "start-client": "cd frontend && npm start",
+    "start-server": "cd server && npm start",
+    "start": "concurrently \"npm run start-server\" \"npm run start-client\"",
+    "init-project": "concurrently \"cd frontend && yarn\" \"cd server && npm install\""
+  },
+  "keywords": [],
+  "author": "Julius Guevarra <juliusguevarra101@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^5.3.0"
+  }
+}
