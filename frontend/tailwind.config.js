@@ -1,12 +1,6 @@
 const plugin = require('tailwindcss/plugin');
-const withMT = require("@material-tailwind/react/utils/withMT");
 
-module.exports = withMT({
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-    "path-to-your-node_modules/@material-tailwind/react/components/**/*.{js,ts,jsx,tsx}",
-    "path-to-your-node_modules/@material-tailwind/react/theme/components/**/*.{js,ts,jsx,tsx}",
-  ],
+module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   darkMode: 'class', // or 'media' or 'class'
   theme: {
@@ -154,4 +148,4 @@ module.exports = withMT({
       addUtilities(contentUtilities, ['before', 'after']);
     }),
   ]
-})
+}
