@@ -68,7 +68,7 @@ const Login: React.FC = () => {
                 <Link to="/">
                     <img
                         src={logo_dark}
-                        alt="Foodie Logo"
+                        alt="Nomid media Logo"
                         className="w-24 relative mx-auto laptop:hidden"
                     />
                 </Link>

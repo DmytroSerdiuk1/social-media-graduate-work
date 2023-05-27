@@ -197,10 +197,6 @@ const NavBarMobile: React.FC<IProps> = ({ theme, isAuth, auth, openModal }) => {
                         </li>
                     </ul>
                 )}
-                {/* --- COPYRIGHT -- */}
-                <span className="text-gray-400 text-xs absolute bottom-8 left-0 right-0 mx-auto text-center">
-                    &copy;Copyright {new Date().getFullYear()} Foodie
-                    </span>
             </div>
         </nav>
     )
