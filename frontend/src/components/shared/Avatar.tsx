@@ -1,3 +1,4 @@
+import { FC } from 'react';
 import placeholder from '~/images/avatar_placeholder.png';
 
 interface IProps {
@@ -6,7 +7,7 @@ interface IProps {
     className?: string;
 }
 
-const Avatar: React.FC<IProps> = ({ url, size, className }) => {
+const Avatar: FC<IProps> = ({ url, size, className }) => {
     return (
         <div
             className={`

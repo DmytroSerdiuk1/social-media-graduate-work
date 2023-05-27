@@ -1,4 +1,4 @@
-import { useState } from "react";
+import {FC, useState } from "react";
 import { ImageLightbox } from "~/components/main";
 import { useModal } from "~/hooks";
 
@@ -6,7 +6,7 @@ interface IProps {
     images: string[];
 }
 
-const ImageGrid: React.FC<IProps> = ({ images }) => {
+const ImageGrid: FC<IProps> = ({ images }) => {
     const { isOpen, closeModal, openModal } = useModal();
     const [activeIndex, setActiveIndex] = useState(0);
 

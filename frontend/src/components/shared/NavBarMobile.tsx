@@ -3,7 +3,7 @@ import {
     LogoutOutlined, MenuOutlined, SearchOutlined,
     StarOutlined, TeamOutlined, UsergroupAddOutlined
 } from "@ant-design/icons";
-import { useState } from "react";
+import {FC, useState } from "react";
 import { Link, useHistory, useLocation } from "react-router-dom";
 import { Messages, Notification } from "~/components/main";
 import { Avatar, SearchInput, ThemeToggler } from "~/components/shared";
@@ -18,7 +18,7 @@ interface IProps {
     openModal: () => void;
 }
 
-const NavBarMobile: React.FC<IProps> = ({ theme, isAuth, auth, openModal }) => {
+const NavBarMobile: FC<IProps> = ({ theme, isAuth, auth, openModal }) => {
     const [isOpenSearch, setOpenSearch] = useState(false);
     const [isOpenMenu, setOpenMenu] = useState(false);
     const { pathname } = useLocation();

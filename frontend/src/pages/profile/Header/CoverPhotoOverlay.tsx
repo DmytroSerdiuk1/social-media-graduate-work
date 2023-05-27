@@ -1,4 +1,5 @@
 import { CameraOutlined, CloseOutlined } from "@ant-design/icons";
+import { FC } from "react";
 import Loader from "~/components/shared/Loader";
 import { IFileHandler, IImage } from "~/types/types";
 
@@ -10,7 +11,7 @@ interface IProps {
     handleSaveCoverPhoto: () => void;
 }
 
-const CoverPhotoOverlay: React.FC<IProps> = (props) => {
+const CoverPhotoOverlay: FC<IProps> = (props) => {
     return (
         <div
             className={`w-full h-full laptop:bg-black laptop:bg-opacity-50 absolute flex items-center justify-center laptop:invisible transition-all ${props.coverPhoto.imageFile.file ? 'z-10' : 'z-0'}`}

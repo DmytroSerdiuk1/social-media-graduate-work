@@ -1,11 +1,12 @@
 import dayjs from 'dayjs';
+import { FC } from 'react';
 
 interface IProps {
     bio: string;
     dateJoined: string | Date;
 }
 
-const Bio: React.FC<IProps> = ({ bio, dateJoined }) => {
+const Bio: FC<IProps> = ({ bio, dateJoined }) => {
     return (
         <aside className="p-4 bg-white dark:bg-indigo-1000 shadow-lg rounded-md space-y-4">
             <div>

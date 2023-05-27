@@ -1,5 +1,5 @@
 import { ArrowLeftOutlined, SaveOutlined } from '@ant-design/icons';
-import { FormEvent, useEffect, useState } from "react";
+import {FC, FormEvent, useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { Redirect, useHistory } from "react-router-dom";
 import { toast } from 'react-toastify';
@@ -13,7 +13,7 @@ interface IProps {
     profile: IProfile;
 }
 
-const EditInfo: React.FC<IProps> = ({ isOwnProfile, profile }) => {
+const EditInfo: FC<IProps> = ({ isOwnProfile, profile }) => {
     const [isUpdating, setIsUpdating] = useState(false);
     const [field, setField] = useState({
         firstname: profile?.firstname || '',

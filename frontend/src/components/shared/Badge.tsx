@@ -1,9 +1,11 @@
+import { FC } from "react";
+
 interface IProps {
     children?: React.ReactNode,
     count: number;
 }
 
-const Badge: React.FC<IProps> = ({ children, count = 0 }) => {
+const Badge: FC<IProps> = ({ children, count = 0 }) => {
     return (
         <div className="relative">
             {count > 0 && (

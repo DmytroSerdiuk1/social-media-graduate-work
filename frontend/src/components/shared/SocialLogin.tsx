@@ -1,6 +1,7 @@
 import { FacebookFilled, GithubFilled, GoogleOutlined } from "@ant-design/icons";
+import { FC } from "react";
 
-const SocialLogin: React.FC<{ isLoading: boolean; }> = ({ isLoading }) => {
+const SocialLogin: FC<{ isLoading: boolean; }> = ({ isLoading }) => {
     const onClickSocialLogin = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
         if (isLoading) e.preventDefault();
     }

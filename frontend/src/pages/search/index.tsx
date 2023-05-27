@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import {FC, useEffect, useState } from "react";
 import useInfiniteScroll from "react-infinite-scroll-hook";
 import { Redirect, RouteComponentProps, useLocation } from "react-router-dom";
 import { Loader, UserLoader } from "~/components/shared";
@@ -13,7 +13,7 @@ const useQuery = () => {
     return new URLSearchParams(useLocation().search);
 }
 
-const Search: React.FC<RouteComponentProps> = ({ history }) => {
+const Search: FC<RouteComponentProps> = ({ history }) => {
     const [users, setUsers] = useState<IProfile[]>([]);
     const [posts, setPosts] = useState<IPost[]>([]);
     const [error, setError] = useState<IError | null>(null);

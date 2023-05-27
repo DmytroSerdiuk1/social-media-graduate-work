@@ -6,7 +6,7 @@ interface IProps {
     users: IProfile[];
 }
 
-const Users: React.FC<IProps> = ({ users }) => {
+const Users: FC<IProps> = ({ users }) => {
     useDocumentTitle(`Search Users | Nomid`);
 
     return (

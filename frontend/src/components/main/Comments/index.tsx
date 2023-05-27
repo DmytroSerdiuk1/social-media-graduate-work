@@ -1,6 +1,6 @@
 import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';
-import { useEffect, useState } from "react";
+import {FC, useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { Boundary, Loader } from '~/components/shared';
 import { useDidMount } from '~/hooks';
@@ -20,7 +20,7 @@ interface IProps {
     setInputCommentVisible: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const Comments: React.FC<IProps> = (props) => {
+const Comments: FC<IProps> = (props) => {
     const {
         postID,
         isCommentVisible,

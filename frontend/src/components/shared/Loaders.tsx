@@ -1,3 +1,4 @@
+import { FC } from 'react';
 import ContentLoader from 'react-content-loader';
 import withTheme from '../hoc/withTheme';
 
@@ -12,7 +13,7 @@ const loaderFgLight = "#ecebeb";
 const loaderBgDark = "#181621";
 const loaderFgDark = "#25232f";
 
-export const PostLoader: React.FC<any> = withTheme((props) => {
+export const PostLoader: FC<any> = withTheme((props) => {
     return (
         <ContentLoader
             speed={2}
@@ -34,7 +35,7 @@ export const PostLoader: React.FC<any> = withTheme((props) => {
     )
 })
 
-export const UserLoader: React.FC<IUserLoader> = withTheme((props) => (
+export const UserLoader: FC<IUserLoader> = withTheme((props) => (
     <ContentLoader
         speed={2}
         width="100%"
@@ -51,7 +52,7 @@ export const UserLoader: React.FC<IUserLoader> = withTheme((props) => (
 
 UserLoader.defaultProps = { includeButton: false };
 
-export const ProfileLoader: React.FC = withTheme(({ theme }) => {
+export const ProfileLoader: FC = withTheme(({ theme }) => {
     const bg = theme === 'dark' ? loaderBgDark : loaderBgLight;
     const fg = theme === 'dark' ? loaderFgDark : loaderFgLight;
 
