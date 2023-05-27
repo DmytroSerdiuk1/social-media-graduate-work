@@ -27,4 +27,4 @@ class Boundary extends Component {
     }
 }
 
-export default Boundary as any;
+export default Boundary;
