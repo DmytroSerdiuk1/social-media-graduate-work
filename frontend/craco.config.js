@@ -37,4 +37,10 @@ module.exports = {
             }
         }
     },
+    plugins: [
+        {
+            plugin: CracoAliasPlugin,
+            options: { alias: configPaths('./tsconfig.paths.json') }
+        }
+    ]
 }
