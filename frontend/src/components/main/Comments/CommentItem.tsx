@@ -50,7 +50,7 @@ const CommentItem: React.FC<IProps> = (props) => {
             setReplies([...replies, ...data]);
             setOffset(offset + 1);
             setVisibleReplies(true);
-        } catch (e: any) {
+        } catch (e) {
             console.log(e);
             setGettingReplies(false);
             setError(e);
@@ -93,7 +93,7 @@ const CommentItem: React.FC<IProps> = (props) => {
                     setSubmitting(false);
                     replies.length === 0 && getReplies();
                 }
-            } catch (e: any) {
+            } catch (e) {
                 console.log(e);
                 if (didMount) {
                     setSubmitting(false);

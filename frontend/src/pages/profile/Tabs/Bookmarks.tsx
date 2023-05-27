@@ -44,7 +44,7 @@ const Bookmarks: React.FC<IProps> = ({ username, isOwnProfile }) => {
 
                 setIsLoading(false);
             }
-        } catch (e: any) {
+        } catch (e) {
             console.log(e);
             if (didMount) {
                 setIsLoading(false);

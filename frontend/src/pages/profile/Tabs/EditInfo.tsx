@@ -52,7 +52,7 @@ const EditInfo: FC<IProps> = ({ isOwnProfile, profile }) => {
                 history.push(`/user/${profile.username}/info`);
                 toast.dark('Profile updated successfully.')
             }
-        } catch (e: any) {
+        } catch (e) {
             if (didMount) {
                 setIsUpdating(false);
             }

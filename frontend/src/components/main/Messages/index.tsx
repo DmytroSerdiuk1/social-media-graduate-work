@@ -93,7 +93,7 @@ const Messages: React.FC<{ isAuth: boolean; }> = ({ isAuth }) => {
             setMessages([...messages, ...result]);
             setOffset(offset + 1);
             setLoading(false);
-        } catch (e: any) {
+        } catch (e) {
             setError(e);
             setLoading(false);
         }
@@ -121,7 +121,7 @@ const Messages: React.FC<{ isAuth: boolean; }> = ({ isAuth }) => {
             if (window.screen.width < 800) {
                 history.push(`/chat/${sender.username}`);
             }
-        } catch (e: any) {
+        } catch (e) {
             console.log(e);
         }
     }

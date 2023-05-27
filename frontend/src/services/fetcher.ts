@@ -37,7 +37,7 @@ const httpRequest = <T>(req: AxiosRequestConfig): Promise<T> => {
             const request = await axios(req);
 
             resolve(request.data.data)
-        } catch (e: any) {
+        } catch (e) {
             reject(e?.response?.data || {});
         }
     });

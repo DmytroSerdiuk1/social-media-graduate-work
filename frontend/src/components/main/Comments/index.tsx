@@ -56,7 +56,7 @@ const Comments: FC<IProps> = (props) => {
                 setComments([...result.reverse(), ...comments]);
                 setIsLoading(false);
             }
-        } catch (e: any) {
+        } catch (e) {
             if (didMount) {
                 setIsLoading(false);
                 setError(e.error?.message || 'Something went wrong.');
@@ -81,7 +81,7 @@ const Comments: FC<IProps> = (props) => {
                     setUpdateMode(false);
                     setSubmitting(false);
                 }
-            } catch (e: any) {
+            } catch (e) {
                 if (didMount) {
                     setSubmitting(false);
                     setError(e.error.message);

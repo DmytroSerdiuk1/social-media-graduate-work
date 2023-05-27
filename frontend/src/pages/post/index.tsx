@@ -43,7 +43,7 @@ const Post: FC<RouteComponentProps<{ post_id: string; }>> = ({ history, match })
             console.log(fetchedPost);
             setIsLoading(false);
             setPost(fetchedPost);
-        } catch (e: any) {
+        } catch (e) {
             console.log(e);
             setIsLoading(false);
             setError(e);

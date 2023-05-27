@@ -19,7 +19,7 @@ const SuggestedPeople: FC = () => {
 
                 setPeople(users);
                 setIsLoading(false);
-            } catch (e: any) {
+            } catch (e) {
                 setIsLoading(false);
                 setError(e);
             }

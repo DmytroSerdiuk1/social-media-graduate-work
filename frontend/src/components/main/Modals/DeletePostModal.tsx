@@ -38,7 +38,7 @@ const DeletePostModal: React.FC<IProps> = (props) => {
             toast.dark('Post successfully deleted.', {
                 progressStyle: { backgroundColor: '#4caf50' }
             });
-        } catch (e: any) {
+        } catch (e) {
             if (didMount) {
                 setIsDeleting(false);
                 setError(e);

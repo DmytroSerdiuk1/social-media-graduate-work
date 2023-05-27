@@ -57,7 +57,7 @@ const EditPostModal: React.FC<IProps> = (props) => {
             toast.dark('Post updated successfully.', {
                 progressStyle: { backgroundColor: '#4caf50' }
             });
-        } catch (e: any) {
+        } catch (e) {
             if (didMount) {
                 setIsUpdating(false);
                 setError(e);

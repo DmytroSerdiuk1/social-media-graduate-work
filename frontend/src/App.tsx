@@ -38,7 +38,7 @@ function App() {
         });
 
         setCheckingSession(false);
-      } catch (e: any) {
+      } catch (e) {
         console.log('ERROR', e);
         setCheckingSession(false);
       }

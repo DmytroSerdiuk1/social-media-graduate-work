@@ -52,7 +52,7 @@ const Search: FC<RouteComponentProps> = ({ history }) => {
                     setPostOffset(postOffset + 1);
                 }
             }
-        } catch (e: any) {
+        } catch (e) {
             if (didMount) {
                 setIsLoadingPost(false);
                 setError(e);
@@ -73,7 +73,7 @@ const Search: FC<RouteComponentProps> = ({ history }) => {
                     setUserOffset(userOffset + 1);
                 }
             }
-        } catch (e: any) {
+        } catch (e) {
             if (didMount) {
                 setIsLoadingUser(false);
                 setError(e);

@@ -37,7 +37,7 @@ function* authSaga({ type, payload }: IAuthSaga) {
                 yield put(clearNewsFeed());
                 yield put(loginSuccess(auth));
                 yield put(isAuthenticating(false));
-            } catch (e: any) {
+            } catch (e) {
                 console.log(e);
 
                 yield handleError(e);
@@ -51,7 +51,7 @@ function* authSaga({ type, payload }: IAuthSaga) {
                 console.log('SUCCESS ', auth);
                 yield put(loginSuccess(auth));
                 yield put(isAuthenticating(false));
-            } catch (e: any) {
+            } catch (e) {
                 yield handleError(e);
             }
             break;
@@ -74,7 +74,7 @@ function* authSaga({ type, payload }: IAuthSaga) {
                 yield put(clearChat());
                 history.push(LOGIN);
                 socket.emit('userDisconnect', auth.id);
-            } catch (e: any) {
+            } catch (e) {
                 yield handleError(e);
             }
             break;

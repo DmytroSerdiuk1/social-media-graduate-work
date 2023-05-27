@@ -35,7 +35,7 @@ const Following: React.FC<IProps> = ({ username }) => {
                 setOffset(offset + 1);
                 setError(null);
             }
-        } catch (e: any) {
+        } catch (e) {
             console.log(e);
             if (didMount) {
                 setIsLoading(false);
