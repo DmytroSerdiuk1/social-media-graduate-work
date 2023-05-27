@@ -73,7 +73,7 @@ const ChatBox: FC<IProps> = ({ user, target }) => {
             if (!target.offset || target.offset < 1) {
                 dummyEl.current?.scrollIntoView();
             }
-        } catch (e: any) {
+        } catch (e) {
             if (didMount) {
                 setLoading(false);
                 setError(e);
