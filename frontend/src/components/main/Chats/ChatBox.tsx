@@ -76,7 +76,7 @@ const ChatBox: FC<IProps> = ({ user, target }) => {
         } catch (e: any) {
             if (didMount) {
                 setLoading(false);
-                setError(e);
+                setError(e as any);
             }
         }
     }
