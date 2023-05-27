@@ -1,5 +1,5 @@
 
-const Loader: FC<{ mode?: string; size?: string }> = ({ mode, size }) => {
+const Loader: React.FC<{ mode?: string; size?: string }> = ({ mode, size }) => {
     return (
         <div className="flex items-center space-x-2">
             <div

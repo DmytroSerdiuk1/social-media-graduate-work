@@ -1,5 +1,5 @@
 import { CloseOutlined, CommentOutlined, LineOutlined, SendOutlined } from "@ant-design/icons";
-import {FC, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
@@ -16,7 +16,7 @@ interface IProps {
     user: IUser;
 }
 
-const ChatBox: FC<IProps> = ({ user, target }) => {
+const ChatBox: React.FC<IProps> = ({ user, target }) => {
     const [text, setText] = useState('');
     const dispatch = useDispatch();
     const [error, setError] = useState<IError | null>(null);

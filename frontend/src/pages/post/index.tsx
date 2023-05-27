@@ -1,4 +1,4 @@
-import {FC, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { RouteComponentProps } from 'react-router-dom';
 import { PostItem, PostModals } from '~/components/main';
 import { Loader } from '~/components/shared';
@@ -7,7 +7,7 @@ import { PageNotFound } from '~/pages';
 import { getSinglePost } from '~/services/api';
 import { IError, IPost } from '~/types/types';
 
-const Post: FC<RouteComponentProps<{ post_id: string; }>> = ({ history, match }) => {
+const Post: React.FC<RouteComponentProps<{ post_id: string; }>> = ({ history, match }) => {
     const [post, setPost] = useState<IPost | null>(null);
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState<IError | null>(null);

@@ -1,5 +1,5 @@
 import { FormOutlined, InfoCircleOutlined, StarOutlined, TeamOutlined, UserAddOutlined } from "@ant-design/icons";
-import {FC, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 interface IProps {
@@ -16,7 +16,7 @@ const linkStyleName = `
     flex justify-center items-center space-x-2 dark:hover:text-white
 `;
 
-const Tabs: FC<IProps> = ({ username, isOwnProfile, followersCount, followingCount }) => {
+const Tabs: React.FC<IProps> = ({ username, isOwnProfile, followersCount, followingCount }) => {
     const { pathname } = useLocation();
     const [activeNav, setActiveNav] = useState('');
 

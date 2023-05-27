@@ -10,6 +10,7 @@ import logo_dark from '~/images/logo.svg';
 import { loginStart } from '~/redux/action/authActions';
 import { setAuthErrorMessage } from '~/redux/action/errorActions';
 import { IRootReducer } from '~/types/types';
+import ReactGA from 'react-ga';
 
 const Login: React.FC = () => {
     const [username, setUsername] = useState('');

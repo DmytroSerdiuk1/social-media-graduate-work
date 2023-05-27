@@ -1,5 +1,5 @@
 import { CameraOutlined, EditOutlined, MessageOutlined } from '@ant-design/icons';
-import {FC, useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { toast } from 'react-toastify';
@@ -22,7 +22,7 @@ interface IProps {
 
 const initImageState = { id: '', file: null, url: '' };
 
-const Header: FC<IProps> = ({ profile, auth }) => {
+const Header: React.FC<IProps> = ({ profile, auth }) => {
     const [isUploadingProfileImage, setIsUploadingProfileImage] = useState(false);
     const [isUploadingCoverPhoto, setIsUploadingCoverPhoto] = useState(false);
     const history = useHistory();

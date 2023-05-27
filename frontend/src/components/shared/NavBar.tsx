@@ -1,4 +1,4 @@
-import {FC, lazy, Suspense } from "react";
+import { lazy, Suspense } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { withAuth, withTheme } from "~/components/hoc";
@@ -17,7 +17,7 @@ interface IProps {
     theme: string;
 }
 
-const NavBar: FC<IProps> = ({ isAuth, theme }) => {
+const NavBar: React.FC<IProps> = ({ isAuth, theme }) => {
     const dispatch = useDispatch();
     const { isLoadingAuth, auth, error } = useSelector((state: IRootReducer) => ({
         isLoadingAuth: state.loading.isLoadingAuth,

@@ -1,5 +1,4 @@
 import { StarOutlined, TeamOutlined } from "@ant-design/icons";
-import { FC } from "react";
 import { Link } from "react-router-dom";
 import { Avatar } from "~/components/shared";
 
@@ -8,7 +7,7 @@ interface IProps {
     profilePicture?: string;
 }
 
-const SideMenu: FC<IProps> = ({ username, profilePicture }) => {
+const SideMenu: React.FC<IProps> = ({ username, profilePicture }) => {
     return (
         <ul className="overflow-hidden">
             <li className="px-4 py-3 cursor-pointer hover:bg-indigo-100 dark:hover:bg-indigo-900">

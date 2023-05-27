@@ -1,4 +1,4 @@
-import {FC, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 import { useDidMount } from '~/hooks';
 import { bookmarkPost } from '~/services/api';
@@ -9,7 +9,7 @@ interface IProps {
     children: (props: any) => React.ReactNode;
 }
 
-const BookmarkButton: FC<IProps> = (props) => {
+const BookmarkButton: React.FC<IProps> = (props) => {
     const [isBookmarked, setIsBookmarked] = useState(props.initBookmarkState || false);
     const [isLoading, setLoading] = useState(false);
     const didMount = useDidMount(true);

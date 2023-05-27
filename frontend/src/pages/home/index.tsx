@@ -1,5 +1,5 @@
 import { CoffeeOutlined, UndoOutlined } from "@ant-design/icons";
-import {FC, useEffect } from "react";
+import { useEffect } from "react";
 import useInfiniteScroll from 'react-infinite-scroll-hook';
 import { shallowEqual, useDispatch, useSelector } from "react-redux";
 import { Link, RouteComponentProps } from "react-router-dom";
@@ -22,7 +22,7 @@ interface IProps extends RouteComponentProps<any, any, ILocation> {
     isAuth: boolean;
 }
 
-const Home: FC<IProps> = (props) => {
+const Home: React.FC<IProps> = (props) => {
     const state = useSelector((state: IRootReducer) => ({
         newsFeed: state.newsFeed,
         auth: state.auth,

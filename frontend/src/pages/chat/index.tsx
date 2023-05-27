@@ -1,11 +1,10 @@
-import { FC } from "react";
 import {useSelector} from "react-redux";
 import {RouteComponentProps} from "react-router-dom";
 import {ChatBox} from "~/components/main";
 import {PageNotFound} from "~/pages";
 import {IRootReducer} from "~/types/types";
 
-const Chat: FC<RouteComponentProps<{ username: string }>> = ({match}) => {
+const Chat: React.FC<RouteComponentProps<{ username: string }>> = ({match}) => {
     const {username} = match.params;
     const {target, user} = useSelector((state: IRootReducer) => ({
         target: state.chats.items.find(chat => chat.username === username),
