@@ -2,9 +2,9 @@ import axios, { AxiosRequestConfig } from "axios";
 import { logoutStart } from '~/redux/action/authActions';
 import store from '~/redux/store/store';
 
-const foodieUrl = process.env.REACT_APP_FOODIE_URL || 'http://localhost:9000';
-const foodieApiVersion = process.env.REACT_APP_FOODIE_API_VERSION || 'v1';
-axios.defaults.baseURL = `${foodieUrl}/api/${foodieApiVersion}`;
+const serverUrl = process.env.REACT_APP_SERVER_URL || 'http://localhost:9000';
+const serverApiVersion = process.env.REACT_APP_SERVER_API_VERSION || 'v1';
+axios.defaults.baseURL = `${serverUrl}/api/${serverApiVersion}`;
 axios.defaults.withCredentials = true;
 
 let isLogoutTriggered = false;
