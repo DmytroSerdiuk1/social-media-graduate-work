@@ -93,7 +93,7 @@ const ChatBox: FC<IProps> = ({ user, target }) => {
                     setText('');
                     setError(null);
                 }
-            } catch (e) {
+            } catch (e: any) {
                 if (didMount) {
                     setSending(false);
                     setError(e);
