@@ -83,7 +83,7 @@ const Notification: React.FC<IProps> = ({ isAuth }) => {
             });
             setOffset(offset + 1);
             setLoading(false);
-        } catch (e) {
+        } catch (e: any) {
             setLoading(false);
             setError(e);
             console.log(e);
@@ -113,7 +113,7 @@ const Notification: React.FC<IProps> = ({ isAuth }) => {
                 return notif;
             });
             setNotifications({ ...notifications, items: updatedNotifs });
-        } catch (e) {
+        } catch (e: any) {
             console.log(e);
         }
     };
@@ -131,7 +131,7 @@ const Notification: React.FC<IProps> = ({ isAuth }) => {
             });
             setHasReadAll(true);
             setNotifications({ ...notifications, items: updatedNotifs });
-        } catch (e) {
+        } catch (e: any) {
             console.log(e);
         }
     }

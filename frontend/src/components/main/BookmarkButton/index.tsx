@@ -42,7 +42,7 @@ const BookmarkButton: FC<IProps> = (props) => {
                     autoClose: 2000
                 });
             }
-        } catch (e) {
+        } catch (e: any) {
             didMount && setLoading(false);
             console.log(e);
         }

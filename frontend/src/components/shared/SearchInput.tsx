@@ -57,7 +57,7 @@ const SearchInput: FC<IProps> = (props) => {
 
                 setSuggestions(users as IProfile[]);
                 setSuggesting(false);
-            } catch (e) {
+            } catch (e: any) {
                 setSuggesting(false);
                 setSuggestions([]);
                 setError(e);
